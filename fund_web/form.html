@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Dados Pessoais: </legend>
+            <label for="nome"> Nome: </label>
+            <input type="text" name="nome" id="nome" maxlength="20" placeholder="Digite seu nome...">
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="Digite seu email...">
+            <br>
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+            <br>
+            <label for="idade">Idade: </label>
+            <input type="number" name="numero" id="numero" step="0.1" min=0 max=1000000000 placeholder="Digite sua Idade...">
+            <br>
+            <label for="dataNascimento">Data de nacimento: </label>
+            <input type="date" name="dataNascimento" id="dataNascimento">
+            <br>
+            <input type="hidden" name="escondido" id="escondido">
+            <br>
+            <label for="estado">Estado de origem: </label>
+            <select name="estado" id="estado">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espiríto Santo</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Informações Adicionais </legend>
+            <label for="escolaridade">Escolaridade: </label>
+            <input type="radio" name="escolaridade" id="escolaridade" value="fundamental"> Fundamental 
+            <input type="radio" name="escolaridade" id="escolaridade" value="medio"> Médio 
+            <input type="radio" name="escolaridade" id="escolaridade" value="superior"> Superior 
+            <input type="radio" name="escolaridade" id="escolaridade" value="pos-graduado"> Pós-Graduação
+            <br><br>
+            <label for="esportes">Esportes Favoritos: </label>
+            <input type="checkbox" name="esportes" id="esportes" value="futebol"> Futebol
+            <input type="checkbox" name="esportes" id="esportes" value="volei"> Vôlei
+            <input type="checkbox" name="esportes" id="esportes" value="basquete"> Basquete
+            <input type="checkbox" name="esportes" id="esportes" value="tenis"> Tênis
+            <br><br>
+            <label for="cor">Cor Favorita: </label>
+            <input type="color" name="cor" id="cor">
+        </fieldset>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
