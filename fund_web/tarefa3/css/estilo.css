@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0efee;
+}
+
+/* cabeçalho */
+
+header {
+    display: flex;
+    background-color: #fff;
+}
+
+header .topo{
+    height: 50px;
+    border-bottom: 1px solid #000;
+}
+
+header div.menu{
+    display: flex;
+}
+
+header a.instituicao{
+    color: #434240;
+    padding-left: 50px;
+    padding-top: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    padding-right: 30px;
+    border-right: 1px solid #cacaca;
+}
+
+header .icones {
+    margin-left: 900px;
+    padding-top: 10px;
+}
+
+header .icones i{
+    font-size: 1.2rem;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-left: 1px solid #cacaca;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    padding-left: 0;
+}
+
+nav ul li{
+    padding-right: 20px;
+    border-right: 1px solid #cacaca;
+}
+
+nav ul li a{
+    color: #55494a;
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid #55494a;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    width: 1400px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+aside #logo{
+    clip-path: polygon(51% 0, 100% 29%, 100% 69%, 50% 100%, 0 69%, 0 29%);
+}
+
+aside .logo h1{
+    text-transform: uppercase;
+    font-size: 2.7em;
+    color:#212020;
+    font-family: 'Montserrat', sans-serif;
+}
+
+aside .logo h2{
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+aside .logo{
+    border-bottom: 1px solid #dbd6d6;
+    margin-bottom: 50px;
+    width: 350px;
+    padding-bottom: 40px;
+}
+
+aside .logo a{
+    text-decoration: none;
+    border-bottom: 1px dotted #4d4b4b;
+}
+
+aside figure{
+    width: 350px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+aside figure img{
+    width: 100%;
+}
+
+aside figcaption{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+aside figcaption .texto{
+    margin-left: 20px;
+}
+
+aside figcaption .texto p {
+    color: #c1c1d0;
+}
+
+aside figure figcaption img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+aside figure figcaption .img-rendonda{
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+aside article .little{
+    width: 250px;
+}
+
+.container .box{
+    width: 1000px;
+    height: 900px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    border: 1px solid #cacaca;
+    background-color: #fff;
+}
+
+.container .box .big-img{
+    width: 900px;
+    margin: auto;
+    margin-left: 40px;
+    border: 1px solid red;
+}
+
+.container .box .superior .flex{
+    display: flex;
+    border-bottom: 1px solid #cacaca;
+}
+
+.box .superior .flex .esquerda{
+    border-right: 1px solid #cacaca;
+    width: 600px;
+}
+
+.box .superior .flex .esquerda h2{
+    color: #474c4f;
+    font-weight: bold;
+}
+
+.box .superior .flex .direita{
+    padding-left: 30px;
+}
+
+.box .superior .flex .direita .perfil{
+    display: flex;
+}
+
+.box .superior .flex .direita .perfil .nome{
+    color: #dcdcdc;
+    text-decoration: none;
+    padding-right: 15px;
+    margin-bottom: 40px;
+    border-bottom: 1px dotted #cacaca;
+}
+
+.box .superior .flex .direita .imagem img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.box .inferior .flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.little .side-box{
+    display: flex;
+    width: 350px;
+    padding: 30px 0 30px 0;
+    border-bottom: 1px solid #dbd6d6;
+}
+
+.little .side-box .img-little{
+    padding-top: 15px;
+}
+
+.little .side-box .text{
+    text-transform: uppercase;
+    margin: 0 20px;
+}
+
+.little .side-box .text p.data{
+    color: #c1c1d0;
+}
+
+aside .saiba-mais{
+    width: 350px;
+    height: 300px;
+    border-top: 1px solid #dbd6d6;
+    border-bottom: 1px solid #dbd6d6;
+}
+
+aside .saiba-mais h3{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+aside .saiba-mais p{
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+
+aside .saiba-mais a{
+    margin-top: 50px;
+    color: #434240;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+aside .social-media{
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    margin-top: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+aside .social-media i{
+    color: #c1c1d0;
+    text-decoration: none;
+}
+
+aside p.autor{
+    color: #c1c1d0;
+    font-size: 0.5rem;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+section .footer{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}

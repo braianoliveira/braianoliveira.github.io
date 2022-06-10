@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    border: 100px solid #152a3e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+   display: flex;
+   flex-direction: row;
+   background-color: #152a3e;
+   padding-left: 20px;
+   width: 1700px;
+}
+
+header h1{
+    font-family: Arial;
+    font-size: 3rem;
+    color: #fff;
+}
+
+header span#nome{
+    color: dodgerblue;
+}
+
+/* Menu */
+
+nav{
+    padding-top: 30px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 1150px;
+}
+
+nav li a#primeiro{
+    color: navy;
+}
+
+nav li a{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+/* Área de destaque */
+
+#destaque{
+    height: 700px;
+    position: relative;
+}
+
+#destaque h1{
+    position: absolute;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 10rem;
+    color: #fff;
+    margin: 0;
+    top: 50px;
+    padding-left: 70px;
+}
+
+#destaque h3{
+    position: absolute;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    top: 250px;
+    width: 800px;
+    padding-left: 90px;
+}
+
+#destaque img{
+    width: 100%;
+    height: 700px;
+    position: static;
+    margin: 0;
+}
+
+/* Área de conteúdo */
+
+section.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+section .card {
+    width: 450px;
+    height: 300px;
+    background-color: #3269a8
+}
+
+.card .info{
+    font-family: Arial;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.card .info h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.card .info .botao{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: dodgerblue;
+}
+
+section.info-site{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section.info-site .img{
+    width: 500px;
+}
+
+section.info-site .img img{
+    width: 400px;
+}
+
+section.info-site .texto{
+    width: 400px;
+    padding-top: 45px;
+}
+
+section.info-site .texto p{
+    font-family: Arial;
+    font-weight: bold;
+    color: navy;
+    text-align: justify;
+    width: 400px;
+}
+
+section.info-site .texto a{
+    font-family: Arial;
+    font-weight: bold;
+    color: navy;
+    margin-top: 90px;
+    text-decoration: none;
+}
+
+section.info-site .depoimento{
+    width: 450px;
+    /*padding-right: 10px;
+    padding-left: 10px;*/
+}
+
+section.info-site .depoimento p{
+    font-family: Arial;
+    font-weight: bold;
+    color: navy;
+    width: 450px;
+    height: 200px;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 10px;
+    background-color: #aee8fc;
+}
+
+section.info-site h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: navy;
+    text-transform: uppercase;
+}
+
+/* Rodapé */
+footer{
+    background-color: #aee8fc;
+    height: 50px;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+footer ul li{
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+footer ul li a{
+    font-family: Arial;
+    font-weight: bold;
+    color: navy;
+    text-decoration: none;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
