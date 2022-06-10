@@ -159,10 +159,20 @@ aside article .little{
 
 .container .box .big-img{
     width: 900px;
-    margin: auto;
-    margin-left: 40px;
-    border: 1px solid red;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 45px;
 }
+
+.container .box .big-img img{
+    width: 100%;
+}
+
+/*.container .box p{
+    width: 700px;
+    margin: auto;
+}*/
+
 
 .container .box .superior .flex{
     display: flex;
@@ -172,10 +182,12 @@ aside article .little{
 .box .superior .flex .esquerda{
     border-right: 1px solid #cacaca;
     width: 600px;
+    margin-left: 30px;
 }
 
 .box .superior .flex .esquerda h2{
     color: #474c4f;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
