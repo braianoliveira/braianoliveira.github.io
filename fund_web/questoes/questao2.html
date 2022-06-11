@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #DDDDDD;
+        }
+
+        header{
+            display: flex;
+            width: 400px;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        header h1{
+            margin-top: 30px;
+            margin-left: 25px;
+            color: #DD0000;
+        }
+
+        header .carro{
+            width: 200px;
+        }
+
+        header .carro img{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        table{
+            width: 400px;
+            height: 300px;
+            margin-top: 20px;
+            color: #DD0000;;
+            text-align: center;
+        }
+
+        table th{
+            font-weight: bold;
+            background-color: #ffd268;
+        }
+
+        table td.normal{
+            font-weight: normal;
+            background-color: #FFFFCC;
+        }
+
+        table td{
+            background-color: #FFFFCC;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tarifas</h1>
+        <div class="carro">
+            <img src="carro.png" alt="carro">
+        </div>
+    </header>
+    <table border="1">
+        <tr>
+            <th rowspan="2">Grupo</th>
+            <th colspan="3">Número de diárias</th>
+        </tr>
+        <tr>
+            <td class="normal">1 a 7</td>
+            <td>8 a 21</td>
+            <td>maior que 21</td>
+        </tr>
+        <tr>
+            <th>A</th>
+            <td>R$ 60,00</td>
+            <td>R$ 54,00</td>
+            <td>R$ 48,00</td>
+        </tr>
+        <tr>
+            <th>C</th>
+            <td>R$ 90,00</td>
+            <td>R$ 81,00</td>
+            <td>R$ 72,00</td>
+        </tr>
+        <tr>
+            <th>L</th>
+            <td>R$ 150,00</td>
+            <td>R$ 135,00</td>
+            <td>R$ 120,00</td>
+        </tr>
+    </table>
+</body>
+</html>

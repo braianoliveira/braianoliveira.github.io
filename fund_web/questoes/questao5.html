@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+
+    <style>
+        header{
+            width:1200px;
+            display: flex;
+            justify-content: space-between;
+            background-color:#eee
+        }
+    </style>
+
+</head>
+<body>
+    <p>
+        &lt;!DOCTYPE html&gt;<br />
+        &lt;html&gt;<strong>acrescentar um lang='pt-br' para especificar o idioma da página</strong><br />
+            &lt;head&gt; <strong>transportar os estilos para uma tag style aqui dentro ou refenriciar uma folha css externa com estes, à fim de organizar melhor o código e garantir economia e maior flexibilidade na estilização</strong><br />
+            &lt;title&gt;Quest&atilde;o 5&lt;/title&gt;<br />
+            &lt;/head&gt;<br />
+            &lt;body&gt;<br /> <strong>transportar os elementos da div#cabecalho para uma tag header, para organizar melhor a página </strong>
+            &lt;div id=&quot;cabecalho&quot; style=&quot;width:1200px;  background-color:#eee&quot;&gt;<br />
+            &lt;h1&gt;Prova<br />
+                &lt;img src=&quot;cefet.png&quot; style=&quot;float:right;&quot;&gt;<strong>é preferível utilizar a tag h1 em textos, assim, seria melhor tirar a imagem de dentro dela e utilizar um display flexível na div para manter os elementos lado a lado e eviar quaisquer problemas de posicionamento ou largura dos elementos, além de acrescentar um alt na tag img para fins de acessibilidade</strong><br />
+            &lt;/h1&gt;	<br />
+            &lt;/div&gt;<br />
+            &lt;div id=&quot;principal&quot;&gt; <strong>transportar os elementos da div#principal para uma tag main, para organizar melhor a página </strong> <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae ipsum eu mi mattis fringilla. In maximus nisl eget sem porttitor cursus. <br /> <strong>Utilizar a tag p para sinalização de um parágrafo</strong>
+                &lt;br /&gt; &lt;br /&gt;<br />
+            &lt;b&gt;&lt;i&gt;Donec maximus&lt;/b&gt;&lt;/i&gt; lectus vel ullamcorper rutrum. Integer egestas neque et vestibulum pulvinar. Mauris placerat felis sit amet dui mollis efficitur.<br /> <strong>fechar a tag b depois de fechar a i, uma vez que ela foi aberta antes, além de transportar todo esse bloco para dentro de uma tag p, à fim de marcar outro parágrafo</strong>
+            &lt;/div&gt; <br />
+            &lt;/body&gt; <br />
+        &lt;/html&gt; <br />
+    </p>
+    <h2>Após as melhorias apontadas: </h2>
+    <header>  
+        <h1>Prova</h1>	
+        <img src="cefet.png" alt="logo">
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae ipsum eu mi mattis fringilla. In maximus nisl eget sem porttitor cursus. 
+        </p><br /> <br />
+        <p>
+            <b><i>Donec maximus</i></b> lectus vel ullamcorper rutrum. Integer egestas neque et vestibulum pulvinar. Mauris placerat felis sit amet dui mollis efficitur.
+        </p>
+    </main>
+</body>
+</html>
