@@ -1,95 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
+    padding-bottom: 0;
+    margin-bottom: 0;
     background-color:#f0f0f0;
 }
 
 header{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
+    width: 1000px;
     margin: auto;
 }
 
-header .texto{
-    border: 1px solid #000;
-    height: 600px;
-    margin-left: 50px;
+header .texto .nome{
+    display: flex;
+}
+
+header .texto .nome i{
+    color: #fa7d00;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+header .texto .nome i:first-child{
+    color: #000d1a;
 }
 
 header h1{
-    font-weight: bold;
     color: #0d2935;
-    float: initial;
+    margin-top: 0;
 }
 
-header h1 span{
+header span{
     color: #fa7d00;
 }
 
 header section{
     width: 500px;
-    padding-left: 30px;
     color: #0d2935;
 }
 
 header section h2{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: normal;
     color: #0d2935;
     margin-top: 30px;
 }
 
 header section p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #0d2935;
     margin-top: 30px;
 }
 
-/*header .container{
-    display: flex;
-    justify-content: space-between;
-}*/
+.imagem{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .banner{
+    width: 100%;
+    margin: 0;
+    padding: 0;
     position: relative;
-    margin-top: 10px;
-    width: 800px;
-    border: 1px solid #000;
+    text-align: right;
 }
 
 .banner img{
     width: 100%;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
 }
 
 .banner figcaption{
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 5px;
-    width: 500px;
+    position: absolute;
+    bottom: 480px;
+    left: 300px;
+    padding: 10px;
+    color: #fff;
     border-radius: 3px;
     font-size: 0.8rem;
     font-weight: bold;
-    float: right;
-}
-
-.banner mark{
-    color: #fa7d00;
-    background-color: none;
+    background-color: #00151e;
 }
 
 nav{
     height: 40px;
     margin: 0;
     padding: 0;
-    background-color: #0d2935;
+    background-color: #000d1a;
 }
 
 nav ul{
@@ -98,26 +107,15 @@ nav ul{
     justify-content: center;
     align-items: center;
     list-style: none;
-    /*padding: 10px 0;*/
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    margin-top: 0;
     width: 100%;
 }
 
 nav ul li {
-    width: 180px;
     height: 30px;
-    padding-top: 10px;
-    padding-left: 15px;
-    margin: 0;
-}
-
-nav ul li +{
-    padding-right: 5px;
-}
-
-nav ul li:nth-child(4){
-    padding-right: 100px;
+    padding: 10px 20px 0 20px;
+    margin: 0 50px 0 50px;
 }
 
 nav ul li a{
@@ -133,23 +131,24 @@ nav ul li:hover{
 
 main{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 800px;
     margin: auto;
     padding-top: 30px;
 }
 
 main .card{
     width: 320px;
-    padding-left: 30px;
-    border: 100px 10px #f0f0f0;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 5px solid #f0f0f0;
 }
 
 main figure {
-    width: 250px;
+    width: 100%;
     height: 200px;
     margin: 0;
+    position: relative;
 }
 
 main figure img{
@@ -157,31 +156,33 @@ main figure img{
     height: 200px;
 }
 
-main figure figcaption{
-    color: red;
-}
-
-/*main figure div{
-    height: 100px;
-    color: #fff;
-    margin-top: -1000px;
-    margin-left: 1000px;
-    padding-top: 0;
-    background-color: #0d2935;
-    border: 1px solid red;
-    clip-path: polygon(0 47%, 100% 46%, 100% 75%, 55% 75%, 50% 100%, 46% 75%, 0% 75%);
-}*/
-
-main .card div {
-    width: 250px;
+main figure .fundo{
+    width: 100%;
     height: 180px;
     margin: auto;
+    bottom: 140px;
+    position: relative;
+    background-color: #000d1a;
+    -webkit-clip-path: polygon(0 55%, 100% 54%, 100% 75%, 52% 76%, 47% 87%, 41% 75%, 0% 75%);
+    clip-path: polygon(0 55%, 100% 54%, 100% 75%, 52% 76%, 47% 87%, 41% 75%, 0% 75%);
 }
 
-main .card div p{
+main figure figcaption{
+    color: #fff;
+    bottom: 35px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    padding-left: 10px;
+}
+
+main .card .texto{
+    width: 300px;
+    height: 180px;
+    margin: auto;
     margin-top: 50px;
     color:#0d2935;
-    font-weight: 400;
 }
 
 main .botao-card{
@@ -191,8 +192,10 @@ main .botao-card{
     height: 30px;
     float: right;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     background-color: #fa7d00;
 }
@@ -204,6 +207,7 @@ footer{
     margin-top: 30px;
     color: #fff;
     background-color: #0d2935;
+    height: 500px;
 }
 
 footer .contato{
@@ -265,7 +269,7 @@ footer .linha{
 
 footer .cobertura{
     width: 400px;
-    height: 320px;
+    height: 380px;
 }
 
 footer .cobertura table{
