@@ -1,13 +1,13 @@
 body{
     margin: 0;
-    border: 100px solid #152a3e;
+    border: 100px solid #002434;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
    display: flex;
    flex-direction: row;
-   background-color: #152a3e;
+   background-color: #002434;
    padding-left: 20px;
    width: 1700px;
 }
@@ -19,7 +19,7 @@ header h1{
 }
 
 header span#nome{
-    color: dodgerblue;
+    color: #00a9e8;
 }
 
 /* Menu */
@@ -36,10 +36,6 @@ nav ul{
     width: 1150px;
 }
 
-nav li a#primeiro{
-    color: navy;
-}
-
 nav li a{
     font-family: Arial;
     font-size: 1.5rem;
@@ -49,44 +45,47 @@ nav li a{
 }
 
 nav li a:hover{
-    text-decoration: underline;
+    color: #0f7596;
 }
 
 /* Área de destaque */
 
 #destaque{
-    height: 700px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
     position: relative;
+    border: 30px solid #fff;
 }
 
-#destaque h1{
+#destaque img{
+    width: 100%;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+}
+
+main h1{
     position: absolute;
     font-family: Arial;
     font-weight: normal;
     font-size: 10rem;
     color: #fff;
     margin: 0;
-    top: 50px;
-    padding-left: 70px;
+    bottom: 350px;
+    left: 200px;
 }
 
-#destaque h3{
+main p.subtitulo{
     position: absolute;
     font-family: Arial;
     font-weight: normal;
     font-size: 1.5rem;
     color: #fff;
     margin: 0;
-    top: 250px;
-    width: 800px;
-    padding-left: 90px;
-}
-
-#destaque img{
-    width: 100%;
-    height: 700px;
-    position: static;
-    margin: 0;
+    width: 520px;
+    bottom: 280px;
+    left: 220px;
 }
 
 /* Área de conteúdo */
@@ -97,12 +96,13 @@ section.cards{
     justify-content: space-around;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 200px;
 }
 
 section .card {
     width: 450px;
     height: 300px;
-    background-color: #3269a8
+    background-color: #0076aa;
 }
 
 .card .info{
@@ -126,7 +126,7 @@ section .card {
     margin-top: 50px;
     border: none;
     cursor: pointer;
-    background-color: dodgerblue;
+    background-color: #00a3e1;
 }
 
 section.info-site{
@@ -210,10 +210,26 @@ footer ul li{
 footer ul li a{
     font-family: Arial;
     font-weight: bold;
-    color: navy;
+    color: #177a9c;
     text-decoration: none;
 }
 
 footer ul li a:hover{
     text-decoration: underline;
+}
+
+footer .final{
+    display: flex;
+    justify-content: space-between;
+    background-color: #002434;
+}
+
+footer .final p, a{
+    color: #fff;
+}
+
+footer .final i{
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 10px 2px 0 2px;
 }
