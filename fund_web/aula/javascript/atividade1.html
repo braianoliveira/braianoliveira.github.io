@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+</head>
+<body>
+    <h3>Atividade 1</h3>
+    <p>Faça um programa que leia dois números e imprima a soma.</p>
+    <input type="number" name="n1" id="n1" placeholder="Número 1">
+    <input type="number" name="n2" id="n2" placeholder="Número 2">
+    <button id="botao1">Somar</button>
+    <div id="resultado1"> </div>
+
+    <h3>Atividade 2</h3>
+    <p>Faça um programa que leia dois números e indique qual dos dois é o maior.</p>
+    <input type="number" name="q1" id="q1" placeholder="Número 1">
+    <input type="number" name="q2" id="q2" placeholder="Número 2">
+    <button id="botao2">Comparar</button>
+    <div id="resultado2"> </div>
+
+    <h3>Atividade 3</h3>
+    <p>Faça um programa que verifique se o número é primo.</p>    
+    <input id="primo" placeholder="Número">
+    <button id="botao3">Verificar</button>
+    <div id="resultado3"></div>
+
+    <h3>Atividade 4</h3>
+    <p>Considerando os dois números passado representam a dimensão dos catetos de um triângulo retângulo, faça um programa que calcule o tamanho da hipotenusa.</p>
+    <input type="number" name="c1" id="c1" placeholder="Cateto oposto">
+    <input type="number" name="c2" id="c2" placeholder="Cateto Adjacente">
+    <button id="botao4">Calcular</button>
+    <div id="resultado4"> </div>
+
+    <h3>Atividade 5</h3>
+    <p>Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário.</p>    
+    <input id="salario" placeholder="Salário">
+    <input id="reajuste" placeholder="% de reajuste">
+    <button id="botao5">Calcular</button>
+    <div id="resultado5"></div>
+
+    <h3>Atividade 6</h3>
+    <p>O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor.</p>
+    <input type="number" name="custo" id="custo" placeholder="Custo de fabrica do carro">
+    <button id="botao6">Calcular</button>
+    <div id="resultado6"> </div>
+
+    <h3>Atividade 7</h3>
+    <p>Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais uma comissão também
+        fixa para cada carro vendido e mais 5% do valor das vendas por ele efetuadas. 
+        Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele recebe por 
+        carro vendido. Calcule e escreva o salário final do vendedor</p>    
+    <input id="qtdCarros" placeholder="Número de carros vendidos">
+    <input id="valorVenda" placeholder="Valor total de vendas">
+    <input id="salario" placeholder="Salário fixo">
+    <input id="carroVendido" placeholder="Valor por carro vendido">
+    <button id="botao7">Calcular</button>
+    <div id="resultado7"></div>
+
+    <h3>Atividade 8</h3>
+    <p>Escreva um algoritmo para ler uma temperatura em graus Fahrenheit, calcular e escrever o valor correspondente em graus Celsius (baseado na fórmula): C/5 =(F-32)/9
+    Observação: Para testar se a sua resposta está correta saiba que 100 C = 212F</p>
+    <input type="number" name="temp" id="temp" placeholder="Temperatura em Fahrenheit">
+    <button id="botao8">Calcular</button>
+    <div id="resultado8"> </div>
+
+    <h3>Atividade 9</h3>
+    <p>Faça um algoritmo que leia três notas de um aluno, calcule e escreva a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é 2, 3 e 5.</p>    
+    <input id="nota1" placeholder="Nota 1">
+    <input id="nota2" placeholder="Nota 2">
+    <input id="nota3" placeholder="Nota 3">
+    <button id="botao9">Cacular</button>
+    <div id="resultado9"></div>
+
+    <h3>Atividade 10</h3>
+    <p>As maçãs custam R$ 1,30 cada se forem compradas menos de uma dúzia, e R$ 1,00 se forem compradas pelo menos 12. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o custo total da compra.</p>
+    <input type="number" name="qtd" id="qtd" placeholder="Quantidade de maçãs">
+    <button id="botao10">Calcular</button>
+    <div id="resultado10"> </div>
+
+</body>
+<script>
+
+    const obtemValor = seletor => {
+        const val = document.querySelector(seletor);
+        return isNaN(parseFloat(val.value)) ? 0:parseFloat(val.value);
+    }
+
+    const escreveValor = (seletor, valor) => {
+        const nodeConteudo = document.createTextNode(valor);
+        document.querySelector(seletor).textContent = "";
+        document.querySelector(seletor).appendChild(nodeConteudo)
+        //document.querySelector(seletor).innerHTML = `<h3>${valor}</h3>`;
+    }
+
+    //const soma = (n1, n2) => n1+n2;
+
+    const maior = (n1,n2) => {
+        if(n1 > n2)
+            return `${n1} é maior que ${n2}`
+        else if (n2 > n1)
+            return `${n2} é maior que ${n1}`
+        else
+            return "Os números são iguais!"
+       // return (n1>n2)? `${n1} é maior que ${n2}`: `${n2} é maior ou igual que ${n1}`;
+    }
+
+    const primo = (n) => {
+        let resp = ""
+        let divisores = 0;
+        for(let i = 1; i <= n; i++){
+            if(n % i == 0)
+                divisores++;
+        }
+
+        return (divisores > 2) ? "O número não é primo" : "O número é primo";
+    }
+
+    const calcularHipotenusa = (c1, c2) =>{
+        const hipo = Math.sqrt((c1**2)+(c2**2));
+        return "A hipotenusa do triângulo é igual a "+hipo;
+    }
+
+    const reajusteSalarial = (salario, p) => {
+        let resp = "";
+        return salario*(1+p/100);
+    }
+
+    const valorCarro = (custo) => {
+        const valor = custo + (custo*0.28) + (custo*0.45);
+        return "O carro custa "+valor+" reais";
+    }
+
+    const revendedorSalario = (n1, n2, n3, n4) => {
+        let resp = "";
+        return n3 + (n2*0.05) + (n1 * n4);
+    }
+
+    const convertePraCelsius = temperatura => {
+        c = (5*(temperatura-32))/9;
+        return c+"° Celsius";
+    }
+
+    const calculaMedia = (n1, n2, n3) => {
+        let resp = "";
+        return (n1 * 2 + n2 * 3 + n3 * 5)/10;
+    }
+
+    const totalCompra = qtd => {
+        let valor = 0; 
+        if(qtd < 12)
+            valor = qtd*1.3;
+        else
+            valor += qtd;
+        return "O total da compra é de "+valor+" reais";
+    }
+
+    botao1 = document.getElementById("botao1");
+    botao1.addEventListener("click", () =>{
+        const n1 = obtemValor("#n1");
+        const n2 = obtemValor("#n2");
+        //const n1 = isNaN(parseFloat(document.getElementById("n1").value)) ? 0:parseFloat(document.getElementById("n1").value);
+        //const n2 = isNaA(parseFloat(document.getElementById("n2").value))? 0:parseFloat(document.getElementById("n2").value);
+        let soma = n1+n2;
+        escreveValor("#resultado1", soma)
+        //document.getElementById("resultado").innerHTML = `<h3>${soma}</h3>`;
+    });
+
+    botao2 = document.getElementById("botao2");
+    botao2.addEventListener("click", () =>{
+        const n1 = obtemValor("#q1");
+        const n2 = obtemValor("#q2");
+        let maiorNum = maior(n1,n2);
+        escreveValor("#resultado2", maiorNum);
+    });
+
+    botao3 = document.getElementById("botao3")
+    botao3.addEventListener("click", () => {
+        const num = obtemValor("#primo")
+
+        escreveValor("#resultado3", primo(num))
+    })
+
+    botao4 = document.getElementById("botao4");
+    botao4.addEventListener("click", () =>{
+        const c1 = obtemValor("#c1");
+        const c2 = obtemValor("#c2");
+        let hipotenusa = calcularHipotenusa(c1,c2);
+        escreveValor("#resultado4", hipotenusa);
+    });
+
+    botao5 = document.getElementById("botao5");
+    botao5.addEventListener("click", () => {
+        const salario = obtemValor("#salario");
+        const p = obtemValor("#reajuste");
+
+        escreveValor("#resultado5", reajusteSalarial(salario,p));
+    })
+
+    botao6 = document.getElementById("botao6");
+    botao6.addEventListener("click", () =>{
+        const custo = obtemValor("#custo");
+        let cCarro = valorCarro(custo);
+        escreveValor("#resultado6", cCarro);
+    });
+
+    botao7 = document.getElementById("botao7");
+    botao7.addEventListener("click", () => {
+        const n1 = obtemValor("#qtdCarros");
+        const n2 = obtemValor("#valorVenda");
+        const n3 = obtemValor("#salario");
+        const n4 = obtemValor("#carroVendido");
+
+        escreveValor("#resultado7", revendedorSalario(n1, n2, n3, n4));
+    })
+
+    botao8 = document.getElementById("botao8");
+    botao8.addEventListener("click", () =>{
+        const temp = obtemValor("#temp");
+        let celsius = convertePraCelsius(temp);
+        escreveValor("#resultado8", celsius);
+    });
+
+    botao9 = document.getElementById("botao9")
+    botao9.addEventListener("click", () => {
+        const n1 = obtemValor("#nota1");
+        const n2 = obtemValor("#nota2");
+        const n3 = obtemValor("#nota3");
+
+        escreveValor("#resultado9", calculaMedia(n1, n2, n3));
+    })
+
+    botao10 = document.getElementById("botao10");
+    botao10.addEventListener("click", () =>{
+        const qtd = obtemValor("#qtd");
+        let total = totalCompra(qtd);
+        escreveValor("#resultado10", total);
+    });
+
+</script>
+</html>
