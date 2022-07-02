@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./img/icone.png" />
+    <title>Login e Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a></li>
+                <li><a href="./livros.html">Livros</a></li>
+                <li><a href="./autores.html">Autores</a></li>
+                <li><a href="login-cadastro.html">Login/Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="#" id="login">
+        <h1>Já é cadastrado? Faça seu login</h1>
+
+        <label for="email">E-mail:</label>
+        <input type="password" name="senha" id="senha">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+
+        <input type="submit" value="Entrar">
+    </form>
+
+    <form action="#" id="cadastro">
+        <h1>Primeira vez no site? Cadastre-se</h1>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required>
+
+        <label for="nome">Nome completo:</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required>
+
+        <label for="confirm-senha">Confirmar senha:</label>
+        <input type="password" name="confirm-senha" id="confirm-senha" required>
+
+        <input type="checkbox" name="termos" id="termos" required>
+        <label for="termos">Aceito os termos e condições do site</label>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a></li>
+                <li><a href="./livros.html">Livros</a></li>
+                <li><a href="./autores.html">Autores</a></li>
+                <li><a href="./login-cadastro.html">Login/Cadastro</a></li>
+            </ul>
+        </nav>
+
+        <div class="informacoes-gerais">
+            <h3>Informações Gerais</h3>
+            <p>(22)2222-2222</p>
+            <p>email@gmail.com</p>
+            <p>Horário de funcionamento:</p>
+            <p>Segunda a Sexta, 9h às 18h</p>
+        </div>
+
+        <div class="endereco">
+            <h3>Encontre a gente</h3>
+            <p>Rua Genérica, nº40 - Centro, Nova Friburgo</p>
+        </div>
+
+        <div class="redes-sociais">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
