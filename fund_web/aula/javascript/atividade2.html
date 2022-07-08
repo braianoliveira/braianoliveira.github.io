@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+</head>
+<body>
+    <h3>Atividade 1</h3>
+    <p>Faça um programa que calcule o fatorial de um número qualquer. O fatorial de um número N é igual ao produto N x (N-1) x (N-2) ... x 1. Para testar sua solução, seu programa deve calcular e imprimir o fatorial de 12.</p>
+    <input type="number" name="n" id="n" placeholder="Número">
+    <button id="botao1">Calcular</button>
+    <div id="resultado1"> </div>
+
+    <h3>Atividade 2</h3>
+    <p>Faça um programa que imprima 30 primeiras potências de 4, ou seja, 4 elevado a 1, 4 elevado a 2 etc.</p>
+    <button id="botao2">Calcular</button>
+    <div id="resultado2"> </div>
+
+    <h3>Atividade 3</h3>
+    <p>Faça um programa para obter a soma de todos os números pares positivos até 1000</p>
+    <button id="botao3">Calcular</button>
+    <div id="resultado3"> </div>
+
+    <h3>Atividade 4</h3>
+    <p>Faça um programa que calcule e imprima os 100 primeiros números da sequência de Fibonacci, definida por: A1 = 1; A2 = 2; A3 = 1 + 2 = A1 + A2; An = An-1 + An-2 (n>=3)</p>
+    <button id="botao4">Calcular</button>
+    <div id="resultado4"> </div>
+
+    <h3>Atividade 5</h3>
+    <p>Faça um programa que identifique e imprima todos os números primos entre 2 e 1000.</p>
+    <button id="botao5">Calcular</button>
+    <div id="resultado5"> </div>
+</body>
+<script>
+
+    const obtemValor = seletor => {
+        const val = document.querySelector(seletor);
+        return isNaN(parseFloat(val.value)) ? 0:parseFloat(val.value);
+    }
+
+    const escreveValor = (seletor, valor) => {
+        const nodeConteudo = document.createTextNode(valor);
+        document.querySelector(seletor).textContent = "";
+        document.querySelector(seletor).appendChild(nodeConteudo)
+    }
+
+    const fatorial = n => {
+        let fator = 1;
+        for(let i=n; i >= 1; i--)
+            fator *= i;
+        return "O fatorial de "+n+" é "+fator;
+    }
+
+    const potencia = n => {
+        for(let i=1; i < 30; i++)
+            document.getElementById("resultado2").innerHTML += n**i +", ";
+    }
+
+    const somaPares = n => {
+        let contador = 0;
+        for(let i=1; i <= n; i++){
+            if(i % 2 == 0)
+                contador += i;
+        }
+        return contador;
+    }
+
+    const imprimeFibonacci = n =>  {
+        let prox = 0;
+        let n1 = 0;
+        let n2 = 1;
+
+        for (let i = 1; i <= n; i++){
+            prox = n1 + n2;
+            n1 = n2;
+            n2 = prox;
+            document.getElementById("resultado4").innerHTML += n1 +", ";
+        }
+    }
+
+    const imprimePrimo = (n) => {
+        let divisores = 0;
+        for(let i = 1; i <= n; i++){
+            if(n % i == 0)
+                divisores++;
+        }
+
+        let ehPrimo = (divisores > 2) ? 0 : 1;
+        if(ehPrimo)
+            document.getElementById("resultado5").innerHTML += n+", ";
+    }
+
+    botao1 = document.getElementById("botao1");
+    botao1.addEventListener("click", () =>{
+        const n = obtemValor("#n");
+        let f = fatorial(n);
+        escreveValor("#resultado1", f);
+    });
+
+    botao2 = document.getElementById("botao2");
+    botao2.addEventListener("click", () =>{
+        potencia(4);
+    });
+
+    botao3 = document.getElementById("botao3");
+    botao3.addEventListener("click", () =>{
+        let s = somaPares(1000);
+        escreveValor("#resultado3", s);
+    });
+
+    botao4 = document.getElementById("botao4");
+    botao4.addEventListener("click", () =>{
+        imprimeFibonacci(100);
+    });
+
+    botao5 = document.getElementById("botao5");
+    botao5.addEventListener("click", () =>{
+        for(let i=2; i<1000; i++)
+            imprimePrimo(i);
+    });
+
+</script>
+</html>
