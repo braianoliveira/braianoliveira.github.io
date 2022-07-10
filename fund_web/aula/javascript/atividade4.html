@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Operações com arrays</legend>
+        <label>Insira um valor:</label>
+        <input id="q01-valor" type="text" placeholder="Digite um valor">
+        <button id="q01-addValor">Adicionar</button>
+        <h6>Lista de Valores Digitados</h6>
+        <ul id="q01-valores">
+
+        </ul>
+        <button id="q01-executar">Calcular</button>
+        <ul id="q01-results">
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Imprimindo Números primos</legend>
+        <label>Insira um valor:</label>
+        <input id="q02-valor" type="text" placeholder="Digite um valor">
+        <button id="q02-addValor">Adicionar</button>
+        <h6>Intervalo</h6>
+        <ul id="q02-valores">
+
+        </ul>
+        <button id="q02-executar">Calcular</button>
+        <ul id="q02-results">
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Imprimindo Números Romanos</legend>
+        <label>Insira um valor em decimal:</label>
+        <input id="q03-valor" type="text" placeholder="Digite um valor">
+        <button id="q03-executar">Calcular</button>
+        <ul id="q03-results">
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>Saque Mínimo</legend>
+        <label>Insira um valor:</label>
+        <input id="q04-valor" type="text" placeholder="Digite um valor">
+        <button id="q04-executar">Calcular</button>
+        <br />
+        <br />
+        <table border="1" id="q04-results">
+            <tr>
+                <th>Cédula</th>
+                <th>Quantidade</th>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+<script>
+    const btn01 = document.querySelector("#q01-executar")
+    const btn02 = document.querySelector("#q02-executar")
+    const btn03 = document.querySelector("#q03-executar")
+    const btn04 = document.querySelector("#q04-executar")
+    const btn05 = document.querySelector("#q05-executar")
+
+
+    const btn1AddValor = document.querySelector("#q01-addValor")
+    const btn2AddValor = document.querySelector("#q02-addValor")
+
+    const getValor = (n) => parseFloat(document.querySelector("#q0"+n+"-valor").value) || 0
+
+    const insereValor = (lista, element) => {
+        for (let i=0; i<element.length; i++)
+            lista.push(parseFloat(element[i].textContent))
+    }
+
+    const sum = lista => {
+        let soma = 0;
+        for(i = 0; i < lista.length; i++){
+            soma += lista[i]
+        }
+
+        return soma
+    }
+
+    const sumOdds = lista => {
+        let soma = 0;
+        for(i = 0; i < lista.length; i++){
+            if(lista[i] % 2 != 0)
+                soma += lista[i]
+        }
+
+        return soma
+    }
+
+    const product = lista => {
+        let produto = 1;
+        for(i = 0; i < lista.length; i++){
+            produto *= lista[i]
+        }
+
+        return produto
+    }
+
+    btn1AddValor.addEventListener("click", () => {
+        const listaVal = document.querySelector("#q01-valores")
+        if(getValor(1))
+            listaVal.innerHTML += `<li>${getValor(1)}</li>`
+    })
+
+    btn01.addEventListener("click", ()=>{
+        const liValores = document.querySelectorAll("#q01-valores li")
+        let lista = [];
+        insereValor(lista, liValores);
+        const listaResp = document.querySelector("#q01-results")
+        listaResp.innerHTML += "Soma dos elementos: "+ sum(lista)
+        listaResp.innerHTML += "<br>Soma dos elementos ímpares: "+ sumOdds(lista)
+        listaResp.innerHTML += "<br>Produto dos elementos: "+ product(lista)
+    })
+
+    const imprimePrimo = (n) => {
+        let divisores = 0;
+        let lista = [];
+        for(let i = 0; i <= n; i++){
+            if(n % i == 0)
+                divisores++;
+        }
+
+        let ehPrimo = (divisores > 2) ? 0 : 1;
+        if(ehPrimo){
+            return n;
+        }
+
+    }
+
+    btn2AddValor.addEventListener("click", () => {
+        const listaVal = document.querySelector("#q02-valores")
+        if(getValor(2))
+            listaVal.innerHTML += `<li>${getValor(2)}</li>`
+    })
+
+    btn02.addEventListener("click", ()=>{
+        const liValores = document.querySelectorAll("#q02-valores li")
+        let lista = [];
+        let listaP = [];
+        insereValor(lista, liValores)
+        const listaResp = document.querySelector("#q02-results")
+        if(lista.length < 2)
+        {
+            for(let i = 2; listaP.length != lista[0]; i++){
+                if(imprimePrimo(i) != undefined){
+                    listaP.push(imprimePrimo(i))
+                }
+            }
+        }
+        else{
+            if(lista[0] < lista[1]){
+                for(let i = lista[0]; i < lista[1]; i++){
+                    if(imprimePrimo(i) != undefined){
+                        listaP.push(imprimePrimo(i))
+                    }
+                }
+            }
+        }
+        for(let j = 0; j < listaP.length; j++)
+            listaResp.innerHTML += listaP[j] + " "
+    })
+
+    const romano = numero => {
+        const romanos = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+        const decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        let i = 0;
+        let resposta = ""
+        while (numero > 0) {
+            if (numero >= decimal[i]) {
+                resposta += romanos[i];
+                numero -= decimal[i];
+            } else {
+                i++;
+            }
+        }
+        return resposta;
+    }
+
+    btn03.addEventListener("click", ()=>{
+        const listaResp = document.querySelector("#q03-results")
+        listaResp.innerHTML = romano(getValor(3))
+    })
+
+    const saqueMinimo = valor => {
+        const notas = [100, 50, 20, 10, 5, 2]
+        const tabela = document.querySelector("#q04-results")
+        let i = 0
+        let qtdNota = 0
+        let qtdNotas= []
+        let notasUsadas  = []
+        while (valor > 0) {
+            if (valor >= notas[i]) {
+                qtdNota = parseInt(valor/notas[i])
+                valor -= qtdNota*notas[i]
+                if(qtdNota != 0)
+                    qtdNotas.push(qtdNota)
+                    notasUsadas.push(notas[i])
+            } else {
+                i++;
+            }
+        }
+        tabela.innerHTML += "<tr>";
+        for(j=0; j<qtdNotas.length; j++)
+        {
+            tabela.innerHTML += "<td>"+notasUsadas[j]+"</td><td>"+qtdNotas[j]+"</td>"
+        }
+        tabela.innerHTML += "</tr>";
+    }
+
+    btn04.addEventListener("click", ()=>{
+        saqueMinimo(getValor(4))
+    })
+</script>
+</html>
