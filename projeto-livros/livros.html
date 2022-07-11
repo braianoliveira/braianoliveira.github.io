@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./img/icone.png" />
     <title>Livros</title>
 </head>
 <body>
     <!--Área do cabeçalho-->
     <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="./index.html"><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a></li>
-                <li><a href="./livros.html">Livros</a></li>
-                <li><a href="./autores.html">Autores</a></li>
-                <li><a href="./login-cadastro.html">Login/Cadastro</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link" ><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./livros.html" class="nav-link" >Livros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./autores.html" class="nav-link" >Autores</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login-cadastro.html" class="nav-link" >Login/Cadastro</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -26,7 +35,7 @@
     <main>
         <p><a href="./index.html">HOME</a> > LIVROS</p>
         <h2>LIVROS</h2>
-        <div class="button-group">
+        <div class="button-group text-center">
             <button type="button" class="active" data-filter="*"> Todos </button>
             <button type="button" data-filter=".romance">Romance</button>
             <button type="button" data-filter=".fantasia">Fantasia</button>
@@ -34,7 +43,7 @@
             <button type="button" data-filter=".suspense">Suspense</button>
             <button type="button" data-filter=".autoajuda">Autoajuda</button>
         </div>
-        <section class="row grid">
+        <section class="row grid text-center">
             <!--Início da área do livro 1-->
             <div class="col-lg-4 col-6 mb-4 element-item romance">
                 <figure class="figure">

@@ -1,0 +1,37 @@
+.element-item img
+{
+    width: 300px;
+    border-radius: 5px;
+    transition: all ease-out 0.2s;
+}
+
+.element-item img:hover
+{
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.button-group
+{
+    margin-bottom: 30px;
+}
+
+.button-group button
+{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+}
+
+.button-group button + button /*margem esuqerda em todos, menos no primeiro item*/
+{
+    margin-left: 30px;
+}
+
+.button-group button.active
+{
+   color: #B1CCC4;
+}
