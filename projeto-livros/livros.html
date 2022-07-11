@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="shortcut icon" href="./img/icone.png" />
     <title>Livros</title>
 </head>
 <body>
     <!--Área do cabeçalho-->
     <header>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="./index.html"><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a></li>
                 <li><a href="./livros.html">Livros</a></li>
@@ -25,20 +26,20 @@
     <main>
         <p><a href="./index.html">HOME</a> > LIVROS</p>
         <h2>LIVROS</h2>
-        <nav>
-            <ul>
-                <li>Todos</li>
-                <li>Romance</li>
-                <li>Fantasia</li>
-                <li>Não-Ficção</li>
-            </ul>
-        </nav>
-        <section>
+        <div class="button-group">
+            <button type="button" class="active" data-filter="*"> Todos </button>
+            <button type="button" data-filter=".romance">Romance</button>
+            <button type="button" data-filter=".fantasia">Fantasia</button>
+            <button type="button" data-filter=".nao-ficao">Não-Ficção</button>
+            <button type="button" data-filter=".suspense">Suspense</button>
+            <button type="button" data-filter=".autoajuda">Autoajuda</button>
+        </div>
+        <section class="row grid">
             <!--Início da área do livro 1-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-mundo-de-Sofia.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item romance">
+                <figure class="figure">
+                    <img src="./img/capas/O-mundo-de-Sofia.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Mundo de Sofia</h4>
                         <p>Jostein Gaarder</p>
                         <a href="./livros/livro1-pagina.html">SAIBA MAIS</a>
@@ -46,10 +47,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 2-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Vendedor-de-Histórias.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Vendedor-de-Histórias.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Vendedor de Histórias</h4>
                         <p>Jostein Gaarder</p>
                         <a href="./livros/livro2-pagina.html">SAIBA MAIS</a>
@@ -57,10 +58,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 3-->
-            <div>
-                <figure>
-                    <img src="./img/capas/A-Garota-das-Laranjas.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item romance">
+                <figure class="figure">
+                    <img src="./img/capas/A-Garota-das-Laranjas.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>A Garota das Laranjas</h4>
                         <p>Jostein Gaarder</p>
                         <a href="./livros/livro3-pagina.html">SAIBA MAIS</a>
@@ -68,10 +69,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 4-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Anna e o Planeta.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Anna e o Planeta.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Anna e o Planeta</h4>
                         <p>Jostein Gaarder</p>
                         <a href="./livros/livro4-pagina.html">SAIBA MAIS</a>
@@ -79,10 +80,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 5-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Ponte-para-Terabítia.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Ponte-para-Terabítia.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Ponte para Terabítia</h4>
                         <p>Katherine Paterson</p>
                         <a href="./livros/livro5-pagina.html">SAIBA MAIS</a>
@@ -90,10 +91,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 6-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Mestre-das-Marionetes.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Mestre-das-Marionetes.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Mestre das Marionetes</h4>
                         <p>Katherine Paterson</p>
                         <a href="./livros/livro6-pagina.html">SAIBA MAIS</a>
@@ -101,10 +102,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 7-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Duas-Vidas-Dois-Destinos.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item ">
+                <figure class="figure">
+                    <img src="./img/capas/Duas-Vidas-Dois-Destinos.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Duas Vidas, Dois Destinos</h4>
                         <p>Katherine Paterson</p>
                         <a href="./livros/livro7-pagina.html">SAIBA MAIS</a>
@@ -112,10 +113,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 8-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Guia-do-Mochileiro-das-Galáxias.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Guia-do-Mochileiro-das-Galáxias.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Guia do Mochileiro das Galáxias</h4>
                         <p>Douglas Adams</p>
                         <a href="./livros/livro8-pagina.html">SAIBA MAIS</a>
@@ -123,10 +124,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 9-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Agência-de-Investigações-Holísticas-Dirk-Gently.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Agência-de-Investigações-Holísticas-Dirk-Gently.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Agência de Investigações Holísticas Dirk Gently</h4>
                         <p>Douglas Adams</p>
                         <a href="./livros/livro9-pagina.html">SAIBA MAIS</a>
@@ -135,9 +136,9 @@
             </div>
             <!--Início da área do livro 10-->
             <div>
-                <figure>
-                    <img src="./img/capas/Longa-e-Sombria-Hora-do-Chá-da-Alma.jpg" alt="Capa do Livro">
-                    <figcaption>
+                <figure class="figure">
+                    <img src="./img/capas/Longa-e-Sombria-Hora-do-Chá-da-Alma.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Longa e Sombria Hora do Chá da Alma</h4>
                         <p>Douglas Adams</p>
                         <a href="./livros/livro10-pagina.html">SAIBA MAIS</a>
@@ -145,9 +146,9 @@
                 </figure>
             </div>
             <!--Início da área do livro 11-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Salmão-da-Dúvida.jpg" alt="Capa do Livro">
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure" class="figure-caption">
+                    <img src="./img/capas/O-Salmão-da-Dúvida.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
                     <figcaption>
                         <h4>O Salmão da Dúvida</h4>
                         <p>Douglas Adams</p>
@@ -156,10 +157,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 12-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Restaurante-no-Fim-do-Universo.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Restaurante-no-Fim-do-Universo.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Restaurante no Fim do Universo</h4>
                         <p>Douglas Adams</p>
                         <a href="./livros/livro12-pagina.html">SAIBA MAIS</a>
@@ -167,10 +168,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 13-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Deuses-à-Solta.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Deuses-à-Solta.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Deuses à Solta</h4>
                         <p>Douglas Adams</p>
                         <a href="./livros/livro13-pagina.html">SAIBA MAIS</a>
@@ -178,10 +179,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 14-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Senhor-dos-Anéis.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Senhor-dos-Anéis.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Senhor dos Anéis</h4>
                         <p>J. R. R. Tolkien</p>
                         <a href="./livros/livro14-pagina.html">SAIBA MAIS</a>
@@ -189,10 +190,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 15-->
-            <div>
-                <figure>
-                    <img src="./img/capas/As-Duas-Torres.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/As-Duas-Torres.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>As Duas Torres</h4>
                         <p>J. R. R. Tolkien</p>
                         <a href="./livros/livro15-pagina.html">SAIBA MAIS</a>
@@ -200,10 +201,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 16-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Retorno-do-Rei.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Retorno-do-Rei.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Retorno do Rei</h4>
                         <p>J. R. R. Tolkien</p>
                         <a href="./livros/livro16-pagina.html">SAIBA MAIS</a>
@@ -211,10 +212,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 17-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Sr-Boaventura.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Sr-Boaventura.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Sr. Boaventura</h4>
                         <p>J. R. R. Tolkien</p>
                         <a href="./livros/livro17-pagina.html">SAIBA MAIS</a>
@@ -222,10 +223,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 18-->
-            <div>
-                <figure>
-                    <img src="./img/capas/A-Queda-de-Artur.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/A-Queda-de-Artur.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>A Queda de Artur</h4>
                         <p>J. R. R. Tolkien</p>
                         <a href="./livros/livro18-pagina.html">SAIBA MAIS</a>
@@ -233,10 +234,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 19-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Um-de-Nós-Está-Mentindo.jpeg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item suspense">
+                <figure class="figure">
+                    <img src="./img/capas/Um-de-Nós-Está-Mentindo.jpeg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Um de Nós Está Mentindo</h4>
                         <p>Karen M. McManus</p>
                         <a href="./livros/livro19-pagina.html">SAIBA MAIS</a>
@@ -244,10 +245,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 20-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Um-de-Nós-é-o-Próximo.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item suspense">
+                <figure class="figure">
+                    <img src="./img/capas/Um-de-Nós-é-o-Próximo.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Um de Nós é o Próximo</h4>
                         <p>Karen M. McManus</p>
                         <a href="./livros/livro20-pagina.html">SAIBA MAIS</a>
@@ -255,10 +256,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 21-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Assim-você-me-mata.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item suspense">
+                <figure class="figure">
+                    <img src="./img/capas/Assim-você-me-mata.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Assim você me mata</h4>
                         <p>Karen M. McManus</p>
                         <a href="./livros/livro21-pagina.html">SAIBA MAIS</a>
@@ -266,10 +267,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 22-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Mortos-Não-Contam-Segredos.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item suspense">
+                <figure class="figure">
+                    <img src="./img/capas/Mortos-Não-Contam-Segredos.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Mortos Não Contam Segredos</h4>
                         <p>Karen M. McManus</p>
                         <a href="./livros/livro22-pagina.html">SAIBA MAIS</a>
@@ -277,10 +278,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 23-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Caso-de-Charles-Dexter-Ward-Nas-Montanhas-da-Loucura-&-contos.webp" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Caso-de-Charles-Dexter-Ward-Nas-Montanhas-da-Loucura-&-contos.webp" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Caso de Charles Dexter Ward, Nas Montanhas da Loucura & contos</h4>
                         <p>H. P. Lovecraft</p>
                         <a href="./livros/livro23-pagina.html">SAIBA MAIS</a>
@@ -288,10 +289,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 24-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-medo-à-espreita.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-medo-à-espreita.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O medo à espreita</h4>
                         <p>H. P. Lovecraft</p>
                         <a href="./livros/livro24-pagina.html">SAIBA MAIS</a>
@@ -299,10 +300,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 25-->
-            <div>
-                <figure>
-                    <img src="./img/capas/Historias-para-não-dormir.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/Historias-para-não-dormir.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Histórias Para Não Dormir</h4>
                         <p>H. P. Lovecraft</p>
                         <a href="./livros/livro25-pagina.html">SAIBA MAIS</a>
@@ -310,10 +311,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 26-->
-            <div>
-                <figure>
-                    <img src="./img/capas/O-Chamado-de-Cthulhu-e-Outros-Contos.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/O-Chamado-de-Cthulhu-e-Outros-Contos.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Chamado de Cthulhu e Outros Contos</h4>
                         <p>H. P. Lovecraft</p>
                         <a href="./livros/livro26-pagina.html">SAIBA MAIS</a>
@@ -321,10 +322,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 27-->
-            <div>
-                <figure>
-                    <img src="./img/capas/A-Sombra-de-Innsmouth.jpg" alt="Capa do Livro">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia">
+                <figure class="figure">
+                    <img src="./img/capas/A-Sombra-de-Innsmouth.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>A Sombra de Innsmouth</h4>
                         <p>H. P. Lovecraft</p>
                         <a href="./livros/livro27-pagina.html">SAIBA MAIS</a>
@@ -332,10 +333,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 28-->
-            <div>
-                <figure>
-                    <img src="./img/capas/e-assim-que-acaba.jpg" alt="Capa do Livro" style="width: 250px; height: 350px">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item romance">
+                <figure class="figure">
+                    <img src="./img/capas/e-assim-que-acaba.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>É Assim Que Acaba</h4>
                         <p>Colleen Hoover</p>
                         <a href="./livros/livro28-pagina.html">SAIBA MAIS</a>
@@ -343,10 +344,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 29-->
-            <div>
-                <figure>
-                    <img src="./img/capas/trono-de-vidro.jpg" alt="Capa do Livro" style="width: 250px; height: 350px">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia romance">
+                <figure class="figure">
+                    <img src="./img/capas/trono-de-vidro.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Trono de Vidro</h4>
                         <p>Sarah J. Maas</p>
                         <a href="./livros/livro29-pagina.html">SAIBA MAIS</a>
@@ -354,10 +355,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 30-->
-            <div>
-                <figure>
-                    <img src="./img/capas/todas-as-suas-imperfeicoes.jpg" alt="Capa do Livro" style="width: 250px; height: 350px">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item romance">
+                <figure class="figure">
+                    <img src="./img/capas/todas-as-suas-imperfeicoes.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Todas as Suas (Im)Perfeições</h4>
                         <p>Colleen Hoover</p>
                         <a href="./livros/livro30-pagina.html">SAIBA MAIS</a>
@@ -365,10 +366,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 31-->
-            <div>
-                <figure>
-                    <img src="./img/capas/principe-cruel.jpg" alt="Capa do Livro" style="width: 250px; height: 350px">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item fantasia romance">
+                <figure class="figure">
+                    <img src="./img/capas/principe-cruel.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>O Príncipe Cruel</h4>
                         <p>Holly Black</p>
                         <a href="./livros/livro31-pagina.html">SAIBA MAIS</a>
@@ -376,10 +377,10 @@
                 </figure>
             </div>
             <!--Início da área do livro 32-->
-            <div>
-                <figure>
-                    <img src="./img/capas/em-busca-de-mim.jpg" alt="Capa do Livro" style="width: 250px; height: 350px">
-                    <figcaption>
+            <div class="col-lg-4 col-6 mb-4 element-item autoajuda">
+                <figure class="figure">
+                    <img src="./img/capas/em-busca-de-mim.jpg" class="figure-img img-fluid rounded" alt="Capa do Livro">
+                    <figcaption class="figure-caption">
                         <h4>Em busca de mim</h4>
                         <p>Viola Davis</p>
                         <a href="./livros/livro32-pagina.html">SAIBA MAIS</a>
@@ -423,4 +424,10 @@
         </div>
     </footer>
 </body>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/owl.carousel.js"></script>
+<script src="./js/isotope.pkgd.min.js"></script>
+<script src="./js/jquery.magnific-popup.min.js"></script>
+<script src="./js/main.js"></script>
 </html>
