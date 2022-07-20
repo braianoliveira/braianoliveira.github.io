@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css"> 
     <link rel="shortcut icon" href="./img/icone.png" />
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
             <a class="navbar-brand" href="#">
-                <img src="./img/icone.png" class="img-fluid" />
-              </a>
+                <img src="./img/icone.png" class="img-fluid logo" />
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--Botão responsivo do menu-->
-                <img src="./img/icone.png" class="navbar-toggler-icon img-fluid" />
+                <span class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -30,7 +31,7 @@
                         <a class="nav-link" href="./autores.html">Autores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./login-cadastro.html">Login/Cadastro</a>
+                        <a class="nav-link" href="./login-cadastro.html"><i class="fa fa-user"></i> Login/Cadastro</a>
                     </li>
                 </ul>
             </div>
@@ -114,28 +115,40 @@
         </form>
     </div>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html"><img src="./img/icone.png" alt="logo" style="height: 50px; width:50px"></a></li>
-                <li><a href="./livros.html">Livros</a></li>
-                <li><a href="./autores.html">Autores</a></li>
-                <li><a href="./login-cadastro.html">Login/Cadastro</a></li>
+    <footer class="container-fluid text-white">
+        <div class="row pl-5">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <img src="./img/icone.png" alt="logo" class="img-fluid">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./livros.html" class="nav-link">Livros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./autores.html" class="nav-link">Autores</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login-cadastro.html" class="nav-link">Login/Cadastro</a>
+                </li>
             </ul>
-        </nav>
-
-        <div class="informacoes-gerais">
-            <h3>Informações Gerais</h3>
-            <p>(22)2222-2222</p>
-            <p>email@gmail.com</p>
-            <p>Horário de funcionamento:</p>
-            <p>Segunda a Sexta, 9h às 18h</p>
         </div>
 
-        <div class="endereco">
+        <section class="col-md-5">
+            <h3>Informações Gerais</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">(22)2222-2222</li>
+                <li class="nav-item">email@gmail.com</li>
+                <li class="nav-item">Horário de funcionamento:</li>
+                <li class="nav-item">Segunda a Sexta, 9h às 18h2</li>
+            </ul>
+        </section>
+
+        <section class="col-md-6">
             <h3>Encontre a gente</h3>
             <p>Rua Genérica, nº40 - Centro, Nova Friburgo</p>
-        </div>
+        </section>
 
         <div class="redes-sociais">
             <a href="#"><i class="fa fa-instagram"></i></a>

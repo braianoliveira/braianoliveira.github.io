@@ -1,3 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header
+{
+    width: 100%;
+    background-color: #B1CCC4;
+    transition: background ease-out 0.2s;
+}
+
+#header.active
+{
+    position: fixed;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.navbar-collapse{
+    width: auto;
+}
+
+nav a img
+{
+    width: 100px;
+}
+
 .element-item img
 {
     width: 300px;
@@ -34,4 +63,9 @@
 .button-group button.active
 {
    color: #B1CCC4;
+}
+
+footer{
+    width: 100%;
+    background-color: #4E5861;
 }
